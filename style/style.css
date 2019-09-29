@@ -1,0 +1,115 @@
+head {
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	background-color: #21150B;
+	margin: 0;
+	padding: 1rem;
+	display: block;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.hamburger {
+	width: 40px;
+	display: flex;
+	position: absolute;
+	overflow: hidden;
+	top: 20px;
+	left: 20px;
+}
+
+.w15 {
+	width: 4rem;
+}
+
+header {
+	position: relative;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	padding-top: 200px;
+	padding-bottom: 100px;
+}
+
+
+.wow {
+	position: absolute;
+	width: 500px;
+}
+
+h1 {
+	color: white;
+	text-shadow: 2px 2px black;
+	font-size: 2.5rem;
+}
+
+h2 {
+	color: #ebdec1;
+	text-shadow: 2px 2px black;
+	font-size: 2.5rem;
+}
+
+h3 {
+	color: white;
+	text-shadow: 2px 2px black;
+	font-size: 1.5rem;
+}
+
+h4 {
+	color: #ebdec1;
+	text-shadow: 2px 2px black;
+	font-size: 1.5rem;
+}
+
+p {
+	color: white;
+	text-shadow: 2px 2px black;
+	font-size: 1.5rem;
+}
+
+.whatiswow {
+	position: relative;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: F4B402;
+	text-shadow: none;
+}
+
+a:link {
+	text-decoration: none;
+	color: F4B402;
+	text-shadow: none;
+}
+
+a:visited {
+	text-decoration: none;
+	color: F4B402;
+	text-shadow: none;
+}
