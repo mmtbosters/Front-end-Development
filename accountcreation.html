@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Blizzard Account</title>
+	<link rel="stylesheet" type="text/css" href="style/style2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+	<!--Hier begint het form element.-->
+	<form action="submit">
+		<!--Het logo van Blizzard Entertainment.-->
+		<img src="img/blizzardlogo.png" alt="Blizzard logo">
+		<h1>Create an account</h1>
+		<!--De button die de gebruiker met facebook laat inloggen.-->
+		<div><button><img src="img/facebookbutton.png" alt=""></button>
+			<!--De button die men laat inloggen met hun google account.-->
+			<button><img src="img/googlebutton.png" alt=""></button></div>
+		<div>
+			<div></div>
+			<p>or</p>
+			<div></div>
+		</div>
+		<!--De informatie bovenaan het formulier.-->
+		<div>
+			<p>Start your adventures with a Blizzard Account.</p>
+			<p>Parents registering for children, <a href="https://eu.battle.net/account/creation/en/parent-signup.html?country=NLD&ret=&theme=blizzard">click here.</a></p>
+		</div>
+		<!--Bij deze optie kan men zijn land aangeven.-->
+		<select name="country">
+			<option value="Netherlands">Netherlands</option>
+			<option value="France">France</option>
+			<option value="Germany">Germany</option>
+			<option value="Russian Federation">Russian Federation</option>
+			<option value="Spain">Spain</option>
+			<option value="United">United Kingdom</option>
+		</select>
+		<!--De voor-en-achternaam van de gebruiker.-->
+		<div>
+			<input name="firstname" type="text" placeholder="First Name"> <input name="lastname" type="text" placeholder="Last Name">
+		</div>
+		<!--De geboorte maand van de gebruiker.-->
+		<div>
+			<select id='gMonth2' onchange="show_month()">
+				<option value=''>Birth Month</option>
+				<option value='1'>January</option>
+				<option value='2'>February</option>
+				<option value='3'>March</option>
+				<option value='4'>April</option>
+				<option value='5'>May</option>
+				<option value='6'>June</option>
+				<option value='7'>July</option>
+				<option value='8'>August</option>
+				<option value='9'>September</option>
+				<option value='10'>October</option>
+				<option value='11'>November</option>
+				<option value='12'>December</option>
+			</select>
+			<!--De geboortedag van de gebruiker.-->
+			<input name="day" type="text" placeholder="Day">
+			<!--Het geboortejaar van de gebruiker.-->
+			<input name="year" type="text" placeholder="Year">
+		</div>
+		<div>
+			<!--Hier kan de gebruiker zijn email-adres invullen.-->
+			<input name="email" type="text" placeholder="E-mail Address">
+		</div>
+		<div>
+			<!--Hier kan de gebruiker een wachtwoord aanmaken.-->
+			<input name="password" type="text" placeholder="Password">
+		</div>
+		<!--De beveiligingsvraag kan de gebruiker hier selecteren.-->
+		<select name="question1" data-select-id="select-box-question1">
+			<option value="">Select a Question</option>
+			<option value="1">What was the first car you owned?</option>
+			<option value="2">What was the street you lived on in high school?</option>
+			<option value="3">Where was the first place you flew?</option>
+			<option value="4">What was the first video game you beat?</option>
+			<option value="5">What was the name of your second pet?</option>
+			<option value="6">What is the name of your favorite sports team or player?</option>
+		</select>
+		<div>
+			<!--Het geheime antwoord op de beveiligingsvraag.-->
+			<input name="secretanswer" type="text" placeholder="Secret Answer">
+		</div>
+		<div>
+			<!--Hier kan de gebruiker aangeven of hij/zij op de hoogte wil blijven van het Blizzard-nieuws.-->
+			<input type="checkbox" class="checkbox">
+			<p>
+				Receive news and special offers about selected third-party products and services by email.</p>
+		</div>
+		<div>
+			<p>Carefully selected news, event information and special offers about third-party products and services.</p>
+		</div>
+		<div>
+			<!--Hier geeft de gebruiker aan of hij de EULA heeft gelezen en of hij deze accepteerd.-->
+			<input type="checkbox" class="checkbox" >
+			<p>
+
+				I have reviewed and understand the <a href="https://eu.blizzard.com/en-gb/company/about/privacy.html">Privacy Policy</a>.</p>
+		</div>
+		<div>
+			<p>For more information about how we use information and your rights to object, see our privacy policy.</p>
+		</div>
+		<!--Account creëren.-->
+		<img src="img/createafreeaccount.png" alt="">
+		<!--Ik heb al een account.-->
+		<img src="img/alreadyhaveanaccount.png" alt="">
+		<div>
+			<!--Links naar de verschillende voorwaarden waarmee men akkoord gaat.-->
+			<p>By clicking on “Create a free account”, I agree to the <a href="https://eu.blizzard.com/en-gb/company/legal/eula.html">Blizzard End User License Agreement</a>, <a href="https://eu.blizzard.com/company/legal/anti-cheating.html">Anti-cheating Agreement</a>, and <a href="https://eu.blizzard.com/company/legal/chat-agreement.html">Chat Agreement</a>.</p>
+		</div>
+	</form>
+
+</body>
+
+
+</html>

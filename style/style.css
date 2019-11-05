@@ -5,19 +5,52 @@ html {
 	box-sizing: border-box;
 }
 
+/*Hier worden alle buttons gestyled in de stijl van WoW*/
+button {
+	background: none;
+	border-width: 30px;
+	border-style: solid;
+	border-color: transparent;
+	border-image: url(https://bnetcmsus-a.akamaihd.net/cms/template_resource/UYDYP3IQMGX81555957771448.png) 25 50 30 fill / 30px 50px / 0 repeat round;
+	padding: 2px 60px 10px;
+	color: #EEA80A;
+}
+
+/*Alle buttons worden iets lichter wanneer je er met de muis overheen gaat.*/
+button:hover {
+	filter: brightness(2);
+	cursor: pointer;
+}
+
+/*Hier word de outline weggehaald wanneer er op een button geklikt is.*/
+button:focus {
+	outline: 0;
+}
+
+/*Hier word de border weggehaald van de actieve buttons.*/
+buton: active {
+	border: none;
+}
+
+/*De styling van de navbalk.*/
 nav {
 	background-color: #231411;
 	border: #1A100C 2px;
+}
+
+
+/*De iconen in de navbalk worden hier netjes weggezet.*/
+nav:first-of-type > ul{
 	display: flex;
 	justify-content: space-between;
 }
 
-nav > li {
-	display: inline-block;
-	margin: 10px;
+nav:first-of-type > ul > li{
+	padding: 10px;
 }
 
-nav > li > div {
+/*Het hamburger menu wordt hier vormgegeven.*/
+nav > ul > li > div {
 	width: 20px;
 	height: 2px;
 	background-color: #F8B700;
@@ -25,63 +58,79 @@ nav > li > div {
 	align-items: flex-start;
 }
 
-nav > li:nth-of-type(2) > img {
+/*De grootte van het 15 year anniverseray logo.*/
+nav > ul > li:nth-of-type(2) > img {
 	width: 50px;
 	justify-content: center;
 }
 
-nav > li:nth-of-type(3) > img {
+/*De grootte van het blizzard account logo.*/
+nav > ul > li:nth-of-type(3) > img {
 	width: 30px;
 	justify-content: center;
 }
 
-/* The side navigation menu */
-.sidenav {
-	height: 100%;
-	/* 100% Full-height */
-	width: 0;
-	/* 0 width - change this with JavaScript */
-	position: fixed;
-	/* Stay in place */
-	z-index: 1;
-	/* Stay on top */
-	top: 0;
-	/* Stay at the top */
-	left: 0;
-	background-color: #221510;
-	/* Black*/
-	overflow-x: hidden;
-	/* Disable horizontal scroll */
-	padding-top: 60px;
-	/* Place content 60px from the top */
-	transition: 0.5s;
-	/* 0.5 second transition effect to slide in the sidenav */
+nav:nth-of-type(2) ul li {
+	margin: 10px;
 }
 
-/* The navigation menu links */
-.sidenav a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
+nav:nth-of-type(2) ul li a:hover {
+	filter: brightness(2)
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-	color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+/*Hier word het nav menu gestyled en aan de zijkant gezet.*/
+body nav:nth-of-type(2) {
 	position: absolute;
-	top: 0;
-	left: 0px;
-	font-size: 36px;
-	margin-left: 0px;
+	display: flex;
+	flex-direction: column;
+	left: -100%;
+	transition: left 0.2s ease-in;
 }
 
+/*Het input veld in het menu wordt hier gestyled.*/
+body nav:nth-of-type(2) ul li input {
+	background-color: #000000;
+	border-color: #352010;
+	border: 5px solid;
+	width: 100%;
+}
+
+/*De placeholder in het input veld van het menu word hier gekleurd.*/
+body nav:nth-of-type(2) ul li input::placeholder {
+	color: #D79E0D;
+}
+
+/*Hier word de outline weggehaald die ontstaat wanneer men klikt in het input veld.*/
+body nav:nth-of-type(2) ul li input:focus {
+	outline: none;
+}
+
+/*hier worden de links in het menu gekleurd.*/
+body nav:nth-of-type(2) ul li a {
+	color: #D79E0D;
+}
+
+/*Dit is de class die wordt toegevoegd met behulp van JavaScript, zodat het menu zichtbaar wordt.*/
+.nav-active {
+	left: 0 !important;
+}
+
+/*Hierin word de grootte van de afbeelding in de nav aangegeven.*/
+body > nav > ul > li > img {
+	width: 20vw;
+}
+
+/*Hier word de button die in het menu staat gestyled.*/
+body > nav > ul > li > a > button {
+	border-image: none;
+	background-image: url(../img/navbutton.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+}
+
+/*De styling van de header.*/
 header {
 	text-align: center;
 	display: flex;
@@ -96,6 +145,7 @@ header {
 	padding-top: 150px;
 }
 
+/*De styling van de header op groot scherm.*/
 @media only screen and (min-width: 667px) {
 	header {
 		text-align: center;
@@ -112,6 +162,7 @@ header {
 	}
 }
 
+/*De styling van de lettertypes.*/
 h1 {
 	color: white;
 	text-shadow: 2px 2px black;
@@ -142,7 +193,7 @@ p {
 	font-size: 16;
 }
 
-
+/*Een "reset" die ervoor zorgt dat de pagina geen padding en/of margin te veel heeft.*/
 html,
 body {
 	margin: 0;
@@ -151,25 +202,29 @@ body {
 	overflow-x: hidden;
 }
 
+/*De styling van de linkjes word weggehaald en een WoW-kleur gegeven.*/
 a {
 	text-decoration: none;
 	color: F4B402;
 	text-shadow: none;
 }
 
+/*Hierin word de schaduw weggehaald van de linkjes.*/
 a:link {
 	text-decoration: none;
 	color: F4B402;
 	text-shadow: none;
 }
 
+/*Hetzelfde als hierboven maar dan voor links die al eens geopend zijn.*/
 a:visited {
 	text-decoration: none;
 	color: F4B402;
 	text-shadow: none;
 }
 
-main > section:first-of-type {
+/*Hier word het eerste article gestyled.*/
+main > article:first-of-type {
 	background-image: url(../img/mage.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -184,7 +239,8 @@ main > section:first-of-type {
 	margin-right: auto;
 }
 
-main > div > section:nth-of-type(1) {
+/*Hier worden de afbeeldingen inclusief tekst in het eerste article gestyled.*/
+main > div > article:nth-of-type(1) {
 	background-image: url(../img/classicraids.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -195,10 +251,10 @@ main > div > section:nth-of-type(1) {
 	justify-content: space-around;
 	align-items: center;
 	padding: 20px;
-	width: 66vh;
+	width: 100vw;
 }
 
-main > div > section:nth-of-type(2) {
+main > div > article:nth-of-type(2) {
 	background-image: url(../img/classictalents.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -209,10 +265,10 @@ main > div > section:nth-of-type(2) {
 	justify-content: space-around;
 	align-items: center;
 	padding: 20px;
-	width: 66vh;
+	width: 100vw;
 }
 
-main > div > section:nth-of-type(3) {
+main > div > article:nth-of-type(3) {
 	background-image: url(../img/classicworld.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -223,9 +279,10 @@ main > div > section:nth-of-type(3) {
 	justify-content: space-around;
 	align-items: center;
 	padding: 20px;
-	width: 66vh;
+	width: 100vw;
 }
 
+/*Het zelfde als hierboven maar dan voor groot scherm, ze worden netjes naast elkaar gezet.*/
 @media only screen and (min-width: 667px) {
 	main > div {
 		display: flex;
@@ -234,13 +291,15 @@ main > div > section:nth-of-type(3) {
 	}
 }
 
+/*Bij een groter scherm is deze margin nodig op de h2 omdat anders de tekst over de header valt.*/
 @media only screen and (min-width: 667px) {
-	main > div > section > h2 {
+	main > div > article > h2 {
 		margin-top: 300px;
 	}
 }
 
-main > section:nth-of-type(2) {
+/*Hier word het tweede article gestyled.*/
+main > article:nth-of-type(2) {
 	background-image: url(../img/gettingstarted.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -252,44 +311,49 @@ main > section:nth-of-type(2) {
 	align-items: center;
 }
 
-main > section:nth-of-type(2) > div > div {
+/*De divs in het article hebben deze margin nodig omdat ze anders tegen elkaar aan staan.*/
+main > article:nth-of-type(2) > div > div {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
 
-main > section:nth-of-type(2) > div > div > img {
+/*De grootte van de icoontjes in dit article.*/
+main > article:nth-of-type(2) > div > div > img {
 	width: 62px;
 }
 
+/*De view height van dit article staat op 80 wanneer hij naar groot scherm gaat.*/
 @media only screen and (min-width: 667px) {
-	main > section:nth-of-type(2) {
+	main > article:nth-of-type(2) {
 		height: 80vh;
 	}
 }
 
+/*De elementen in dit article komen netjes naast elkaar te staan wanneer men naar groot scherm gaat.*/
 @media only screen and (min-width: 667px) {
-	main > section:nth-of-type(2) > div {
+	main > article:nth-of-type(2) > div {
 		display: flex;
 		justify-content: center;
 	}
 }
 
-
+/*De breedte van de elementen word aangepast met behulp van een media query.*/
 @media only screen and (min-width: 667px) {
-	main > section:nth-of-type(2) > div > div {
+	main > article:nth-of-type(2) > div > div {
 		max-width: 20rem;
 	}
 }
 
 @media only screen and (min-width: 667px) {
-	main > section:nth-of-type(2) > div > div > p {
+	main > article:nth-of-type(2) > div > div > p {
 		max-width: 100%;
 	}
 }
 
-main > section:nth-of-type(3) {
+/*Hier begint de styling van het derde article.*/
+main > article:nth-of-type(3) {
 	background-image: url(../img/installgame.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -301,8 +365,9 @@ main > section:nth-of-type(3) {
 	align-items: center;
 }
 
+/*Wanneer men naar groot scherm gaat, vallen de elementen naast elkaar.*/
 @media only screen and (min-width: 667px) {
-	main > section:nth-of-type(3) > div {
+	main > article:nth-of-type(3) > div {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
@@ -311,17 +376,20 @@ main > section:nth-of-type(3) {
 	}
 }
 
-main > section:nth-of-type(3) > div > div > img {
+/*De breedte van de afbeeldingen in dit article.*/
+main > article:nth-of-type(3) > div > div > img {
 	width: 312px;
 }
 
+/*De breedte van de afbeeldingen in dit article gaat omhoog wanneer men naar groot scherm gaat.*/
 @media only screen and (min-width: 667px) {
-	main > section:nth-of-type(3) > div > div > img {
+	main > article:nth-of-type(3) > div > div > img {
 		width: 461px;
 	}
 }
 
-main > section:nth-of-type(4) {
+/*Hier begint de styling van het vierde article.*/
+main > article:nth-of-type(4) {
 	background-image: url(../img/mediagallery.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -332,29 +400,82 @@ main > section:nth-of-type(4) {
 	justify-content: space-around;
 	align-items: center;
 	height: 100vh;
+	padding-top: 500px;
+	padding-bottom: 600px;
 }
 
-@media only screen and (min-width: 667px) {
-	main > section:nth-of-type(4) > div > img {
-		width: 348px;
+/*Dit article is andersom gestyled, de elementen vallen boven elkaar wanneer men onder de 667 pixels gaat.*/
+@media only screen and (max-width: 667px) {
+	main > article:nth-of-type(4) {
+		background-image: url(../img/mediagallery.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 100vh;
+		padding-top: 800px;
+		padding-bottom: 800px;
 	}
 }
 
-@media only screen and (min-width: 667px) {
-	main > section:nth-of-type(4) > a > img {
+iframe {
+	border: 0;
+}
+
+/*De breedte van de afbeeldingen in dit element.*/
+main > article:nth-of-type(4) > a > img {
+	width: 348px;
+}
+
+/*Deze class zorgt ervoor dat de rogue in stealth gaat.*/
+main > article:nth-of-type(4) > div > img:nth-of-type(2) {
+	width: 150px;
+	opacity: 0;
+}
+
+/*Deze class wordt toegevoegd met behulp van javascript, zodat de rogue zichtbaar wordt.*/
+.rogue-active {
+	opacity: 0.5 !important;
+}
+
+/*De grootte van de afbeeldingen in dit element.*/
+main > article:nth-of-type(4) > div > img {
+	width: 348px;
+}
+
+/*Ook dit element veranderd wanneer men het scherm verkleind, pas bij deze class had ik ontdekt dat je meerdere classes in 1 media query kan zetten.*/
+@media only screen and (max-width: 667px) {
+	main > article:nth-of-type(4) > div > img {
 		width: 348px;
 	}
+
+	main > article:nth-of-type(4) > div > img:nth-of-type(2) {
+		margin-left: 100px;
+	}
+
+	main > article:nth-of-type(4) > div {
+		display: flex;
+		flex-direction: column;
+	}
+
+	main > article:nth-of-type(4) > a > img {
+		width: 348px;
+	}
+
 }
 
-main > section:nth-of-type(4) > div > img:hover {
+
+/*Door dit element geven de afbeeldingen in dit element licht wanneer je er met de muis overheen gaat.*/
+main > article:nth-of-type(4) > div > img:hover {
 	filter: brightness(1.2);
 }
 
-main > section:nth-of-type(4) > a > img:hover {
-	filter: brightness(1.2);
-}
-
-main > section:nth-of-type(5) {
+/*Dit is het 5e en tevens laatste article van de pagina.*/
+main > article:nth-of-type(5) {
 	background-image: url(../img/orc.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -364,42 +485,67 @@ main > section:nth-of-type(5) {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	height: 40vh;
+	padding-right: 600px;
 }
 
-footer > section {
+/*Ook dit article veranderd wanneer men het scherm vergroot.*/
+@media only screen and (max-width: 667px) {
+	main > article:nth-of-type(5) {
+		background-image: url(../img/orc.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 50vh;
+		padding-left: 250px;
+	}
+
+	main > article:nth-of-type(5) > h1 {
+		width: 500px;
+	}
+
+	main > article:nth-of-type(5) > button {
+		width: 250px;
+	}
+}
+
+/*Hier word de footer gestyled.*/
+footer > article > ul {
 	background-color: #1D1512;
 	display: flex;
-	justify-content: space-between;
 }
 
-
-footer > section > a > img {
+/*De logo's in de footer.*/
+footer > article > ul > li > a > img {
 	color: #F8B700;
-	width: 50px;
+	width: 20px !important;
+	margin: 10px;
 }
 
-footer > section > a > img:hover {
+/*De tekst in de footer.*/
+footer > article > ul > li > h3 {
+	margin-top: 10px;
+}
+
+/*De logo's geven licht wannner je er met de muis overheen gaat.*/
+footer > article > ul > li > a > img:hover {
 	filter: brightness(10)
 }
 
-button {
-	background: none;
-	border-width: 30px;
-	border-style: solid;
-	border-color: transparent;
-	border-image: url(https://bnetcmsus-a.akamaihd.net/cms/template_resource/UYDYP3IQMGX81555957771448.png) 25 50 30 fill / 30px 50px / 0 repeat round;
-	padding: 2px 60px 10px;
-	color: #EEA80A;
+/*De elementen in de footer worden netjes op een rijtje gezet.*/
+footer article ul {
+	list-style: none;
+	padding: 10px;
+	margin: auto 0;
+	display: flex;
+	justify-content: center;
 }
 
-button:hover {
-	filter: brightness(2);
-}
-
-button:focus {
-	outline: 0;
-}
-
-buton: active {
-	border: none;
+ul {
+	list-style: none;
 }

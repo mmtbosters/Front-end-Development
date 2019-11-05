@@ -3,134 +3,191 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>World of Warcraft:Classic</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
 <body>
-
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
-	</div>
+	<!--Hier begint de nav.-->
 	<nav>
-		<li onclick="openNav()">
-			<div></div>
-			<div></div>
-			<div></div>
-		</li>
-		<li>
-			<img src="img/w15.png" alt="">
-		</li>
-		<li>
-			<img src="img/account.png" alt="">
-		</li>
+		<ul>
+			<!--Het hamburgermenu in de navbalk.-->
+			<li class="burger">
+				<div></div>
+				<div></div>
+				<div></div>
+			</li>
+			<!--Het logo in het midden van de navbalk.-->
+			<li>
+				<img src="img/w15.png" alt="15 Year anniversary logo Small">
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+			</li>
+			<!--Het Battle.net logo in de rechterkant van de navbalk.-->
+			<li>
+				<img src="img/account.png" alt="Battle.net account">
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+			</li>
+		</ul>
 	</nav>
+	<!--Het menu dat tevoorschijn komt wanneer er op de hamburger wordt geklikt.-->
+	<nav>
+		<ul>
+			<li><img src="img/wow15.png" alt="15 Year anniversary logo">
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+			</li>
+			<li><input type="text" placeholder="Search for characters, blogs, and more..."></li>
+			<li><a href="https://worldofwarcraft.com/en-gb/">HOME</a></li>
+			<li><a href="">GAME</a></li>
+			<li><a href="https://worldofwarcraft.com/en-gb/news">NEWS</a></li>
+			<li><a href="https://eu.forums.blizzard.com/en/wow/">FORUMS</a></li>
+			<li><a href="https://eu.shop.battle.net/en-gb/family/world-of-warcraft">SHOP</a></li>
+			<li><a href="">ESPORTS</a></li>
+			<li><a href="https://worldofwarcraft.com/en-gb/wowclassic">WOW CLASSIC</a></li>
+			<li><a href="https://worldofwarcraft.com/en-gb/login">LOG IN</a></li>
+			<li><a href="https://battle.net/account/creation/tos.html?theme=wow&style=wow-trial"><button>TRY FREE</button></a></li>
+		</ul>
+	</nav>
+	<!--De header met daarin het WoW Classic logo en de "Play Now" button.-->
 	<header>
-		<img src="img/wow.png" alt="">
+		<img src="img/wow.png" alt="Wow Classic Logo">
+		<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
 		<h1>Relive the legend</h1>
-		<button onclick="https://eu.shop.battle.net/en-gb/product/world-of-warcraft-subscription?blzcmp=wow_subscribe_ragnaros" type="button">PLAY NOW*</button>
+		<a href="https://eu.shop.battle.net/en-gb/product/world-of-warcraft-subscription?blzcmp=wow_subscribe_ragnaros"><button>PLAY NOW*</button></a>
 	</header>
+	<!--Hier begint de main.-->
 	<main>
-		<section>
+		<!--Het eerste article: What is WoW classic?-->
+		<article>
 			<h3>WHAT IS WOW® CLASSIC?</h3>
 			<h2>Azeroth As It Was</h2>
 			<h4>The drums of war thunder once again… Return to a lost era of Azeroth and enjoy the timeless stories that defined this world at war.</h4>
 			<p>World of Warcraft Classic is a faithful recreation of the original World of Warcraft. Combat mechanics, original character models, and skill trees all contribute to a truly authentic experience.</p>
 			<h4>Among many other features coming in future updates to WoW Classic, you'll find:</h4>
-		</section>
+		</article>
+		<!--De volgende elementen zijn in een div gezet om ze als geheel te kunnen stylen.-->
 		<div>
-			<section>
+			<article>
 				<h2>Classic Raids</h2>
 				<p>Venture forth into epic 40-person raids such as Molten Core, Onyxia, and more.</p>
-			</section>
-			<section>
+			</article>
+			<article>
 				<h2>Classic Talents</h2>
 				<p>Level up and spend your hard earned talents points, one at a time.</p>
-			</section>
-			<section>
+			</article>
+			<article>
 				<h2>Classic World</h2>
 				<p>A challenging outdoor world awaits you. Bring your friends - you'll need them!</p>
-			</section>
+			</article>
 		</div>
-		<section>
+		<!--Het tweede grote article, hierin word beschreven hoe je WoW Classic (weer) kan gaan spelen.-->
+		<article>
 			<h1>GETTING STARTED</h1>
 			<h2>What do I Need to Play WoW Classic?</h2>
 			<h4>Access to WoW Classic is included in and available to all players with an active World of Warcraft subscription—no additional purchase required.</h4>
+			<!--De volgende elementen zijn ieder in een div gezet, met daar omheen nog een div zodat ik ze individueel en gegroepeerd kon stylen.-->
 			<div>
 				<div>
-					<img src="img/blizzacount.png" alt="">
+					<img src="img/blizzacount.png" alt="Create a Blizzard account badge">
+					<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
 					<h4>Create a Blizzard Account</h4>
-					<p>If you’re a first-time adventurer, or if you’re just looking for a fresh start, create a new Blizzard Account by visiting <a href="https://eu.battle.net/account/creation/en/">this page</a>.</p>
+					<p>If you’re a first-time adventurer, or if you’re just looking for a fresh start, create a new Blizzard Account by visiting <a href="accountcreation.html">this page</a>.</p>
 				</div>
 				<div>
-					<img src="img/recoveraccount.png" alt="">
+					<img src="img/recoveraccount.png" alt="Recover your account badge">
+					<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
 					<h4>Recover Your Account</h4>
 					<p>If you can’t remember your account name or password, or never converted your original WoW account to a Blizzard account, <a href="https://eu.battle.net/support/en/help/product/wow/181/938/channels">get in touch with us</a> and we’ll help you recover it.</p>
 				</div>
 				<div>
-					<img src="img/renewaccount.png" alt="">
+					<img src="img/renewaccount.png" alt="Renew your subscription badge">
+					<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
 					<h4>Renew Your Subscription</h4>
 					<p>To play World of Warcraft Classic, you need an active World of Warcraft subscription or non-recurring game time. You can subscribe by visiting the <a href="https://eu.shop.battle.net/en-gb/product/world-of-warcraft-subscription">Blizzard Shop</a>.</p>
 				</div>
 			</div>
-		</section>
-		<section>
+		</article>
+		<!--Het derde article, hierin wordt beschreven hoe men WoW classic installeerd.-->
+		<article>
 			<h1>INSTALLING THE GAME</h1>
 			<h2>How Do I Install World of Warcraft Classic?</h2>
+			<!--Wederom zijn de elementen eenieder in een div gezet en is er nog een overkoepelende div voor de styling.-->
 			<div>
 				<div>
 					<h1>STEP 1</h1>
-					<img src="img/s1.png" alt="">
+					<img src="img/s1.png" alt="Step 1">
+					<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
 					<h4>Download</h4>
 					<p>Start by downloading the Blizzard Battle.net Desktop App. Open the App, and either create a new account, or log in using your existing account.</p>
 				</div>
 				<div>
 					<h1>STEP 2</h1>
-					<img src="img/s2.png" alt="">
+					<img src="img/s2.png" alt="Step 2">
+					<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
 					<h4>Install WoW Classic</h4>
 					<p>In the App, click on the World of Warcraft tab. Select "WoW Classic” in the Version or Region/Account drop-down menus, and hit the Install button.</p>
 				</div>
 				<div>
 					<h1>STEP 3</h1>
-					<img src="img/s3.png" alt="">
+					<img src="img/s3.png" alt="Step 3">
+					<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
 					<h4>Create a New Character and Play!</h4>
 					<p>WoW Classic characters start their journey at level 1. If you had any characters previously, they will still be available in World of Warcraft, but they will not be playable in World of Warcraft Classic.</p>
 				</div>
 			</div>
-		</section>
-		<section>
+		</article>
+		<!--Het vierde article, dit is de Media Gallery waarin men filmpjes of youtube of de foto-gallerij kan bekijken.-->
+		<article>
 			<h2>Media Gallery</h2>
 			<div>
-				<iframe width="348" height="196" src="https://www.youtube.com/embed/-zR60pICmCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<iframe width="348" height="196" src="https://www.youtube.com/embed/CWS8rKRks7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<iframe width="348" height="196" src="https://www.youtube.com/embed/D4oT8034lO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<img src="img/noob.png" alt="">
+				<iframe width="348" height="196" src="https://www.youtube.com/embed/-zR60pICmCY"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+				<iframe width="348" height="196" src="https://www.youtube.com/embed/CWS8rKRks7I"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+				<iframe width="348" height="196" src="https://www.youtube.com/embed/D4oT8034lO8"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+
+				<img class="gankpally" src="img/noob.png" alt="Noob Paladin">
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+				<audio id="stealthy" src="script/stealth.mp3"></audio>
+				<!--Bron:https://www.youtube.com/watch?v=5cFj6T9lOtM-->
+				<img src="img/rogue.gif" alt="rogue">
+				<!--Bron:https://giphy.com/stickers/world-of-warcraft-Bw7NROUTQ3wGc-->
 			</div>
 			<button>LOAD MORE</button>
-			<a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/263A8NGR8HLZ1556919642368.pdf"><img src="img/gamemanual.png" alt=""></a>
+			<a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/263A8NGR8HLZ1556919642368.pdf"><img src="img/gamemanual.png" alt="Donwload game Manual"></a>
 			<a href="https://bnetcmsus-a.akamaihd.net/cms/template_resource/263A8NGR8HLZ1556919642368.pdf">Download Game Manual</a>
-		</section>
-		<section>
+		</article>
+		<!--Het vijfde article, deze is erg klein, maar de tekst en de knop zeggen als call-to-action genoeg.-->
+		<article>
 			<h1>Relive the Legend</h1>
 			<button>PLAY NOW*</button>
-		</section>
+		</article>
 	</main>
+	<!--Hier begint de footer met daarin de links naar de social media van WoW.-->
 	<footer>
-		<section>
-			<h2>FOLLOW WARCRAFT</h2>
-			<a href="https://www.facebook.com/WorldofWarcraft.eu"><img src="img/logofacebook.svg" alt=""></a>
-			<a href="https://twitter.com/warcraft"><img src="img/logotwitter.svg" alt=""></a>
-			<a href="https://www.youtube.com/user/WorldofWarcraft"><img src="img/logoyoutube.svg" alt=""></a>
-			<a href="https://www.reddit.com/r/wow"><img src="img/logoreddit.svg" alt=""></a>
-			<a href="https://www.instagram.com/warcraft/"><img src="img/logoinsta.svg" alt=""></a>
-		</section>
+		<article>
+			<ul>
+				<li>
+					<h3>FOLLOW WARCRAFT</h3>
+				</li>
+				<li><a href="https://www.facebook.com/WorldofWarcraft.eu"><img src="img/logofacebook.svg" alt="Facebook logo"></a></li>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+				<li><a href="https://twitter.com/warcraft"><img src="img/logotwitter.svg" alt="Twitter Logo"></a></li>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+				<li><a href="https://www.youtube.com/user/WorldofWarcraft"><img src="img/logoyoutube.svg" alt="Youtube Logo"></a></li>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+				<li><a href="https://www.reddit.com/r/wow"><img src="img/logoreddit.svg" alt="Reddit Logo"></a></li>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+				<li><a href="https://www.instagram.com/warcraft/"><img src="img/logoinsta.svg" alt="Instagram Logo"></a></li>
+				<!--Bron:https://worldofwarcraft.com/en-gb/wowclassic-->
+			</ul>
+		</article>
 	</footer>
+	<!--Het script wordt onderaan de pagina aangeroepen, omdat er anders functies worden gedraaid zonder dat de HTML nog bekend is.-->
 	<script src="script/script.js"></script>
+
 </body>
 
 </html>
