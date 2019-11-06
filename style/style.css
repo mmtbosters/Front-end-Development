@@ -28,7 +28,7 @@ button:focus {
 }
 
 /*Hier word de border weggehaald van de actieve buttons.*/
-buton: active {
+button: active {
 	border: none;
 }
 
@@ -50,7 +50,7 @@ nav:first-of-type > ul > li{
 }
 
 /*Het hamburger menu wordt hier vormgegeven.*/
-nav > ul > li > div {
+nav > ul > li > fieldset {
 	width: 20px;
 	height: 2px;
 	background-color: #F8B700;
@@ -240,7 +240,7 @@ main > article:first-of-type {
 }
 
 /*Hier worden de afbeeldingen inclusief tekst in het eerste article gestyled.*/
-main > div > article:nth-of-type(1) {
+main > fieldset > article:nth-of-type(1) {
 	background-image: url(../img/classicraids.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -254,7 +254,7 @@ main > div > article:nth-of-type(1) {
 	width: 100vw;
 }
 
-main > div > article:nth-of-type(2) {
+main > fieldset > article:nth-of-type(2) {
 	background-image: url(../img/classictalents.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -268,7 +268,7 @@ main > div > article:nth-of-type(2) {
 	width: 100vw;
 }
 
-main > div > article:nth-of-type(3) {
+main > fieldset > article:nth-of-type(3) {
 	background-image: url(../img/classicworld.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -284,7 +284,7 @@ main > div > article:nth-of-type(3) {
 
 /*Het zelfde als hierboven maar dan voor groot scherm, ze worden netjes naast elkaar gezet.*/
 @media only screen and (min-width: 667px) {
-	main > div {
+	main > fieldset {
 		display: flex;
 		justify-content: space-between;
 		height: 60vh;
@@ -293,7 +293,7 @@ main > div > article:nth-of-type(3) {
 
 /*Bij een groter scherm is deze margin nodig op de h2 omdat anders de tekst over de header valt.*/
 @media only screen and (min-width: 667px) {
-	main > div > article > h2 {
+	main > fieldset > article > h2 {
 		margin-top: 300px;
 	}
 }
@@ -311,8 +311,8 @@ main > article:nth-of-type(2) {
 	align-items: center;
 }
 
-/*De divs in het article hebben deze margin nodig omdat ze anders tegen elkaar aan staan.*/
-main > article:nth-of-type(2) > div > div {
+/*De fieldsets in het article hebben deze margin nodig omdat ze anders tegen elkaar aan staan.*/
+main > article:nth-of-type(2) > fieldset > fieldset {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 40px;
@@ -320,7 +320,7 @@ main > article:nth-of-type(2) > div > div {
 }
 
 /*De grootte van de icoontjes in dit article.*/
-main > article:nth-of-type(2) > div > div > img {
+main > article:nth-of-type(2) > fieldset > fieldset > img {
 	width: 62px;
 }
 
@@ -333,7 +333,7 @@ main > article:nth-of-type(2) > div > div > img {
 
 /*De elementen in dit article komen netjes naast elkaar te staan wanneer men naar groot scherm gaat.*/
 @media only screen and (min-width: 667px) {
-	main > article:nth-of-type(2) > div {
+	main > article:nth-of-type(2) > fieldset {
 		display: flex;
 		justify-content: center;
 	}
@@ -341,13 +341,13 @@ main > article:nth-of-type(2) > div > div > img {
 
 /*De breedte van de elementen word aangepast met behulp van een media query.*/
 @media only screen and (min-width: 667px) {
-	main > article:nth-of-type(2) > div > div {
+	main > article:nth-of-type(2) > fieldset > fieldset {
 		max-width: 20rem;
 	}
 }
 
 @media only screen and (min-width: 667px) {
-	main > article:nth-of-type(2) > div > div > p {
+	main > article:nth-of-type(2) > fieldset > fieldset > p {
 		max-width: 100%;
 	}
 }
@@ -367,7 +367,7 @@ main > article:nth-of-type(3) {
 
 /*Wanneer men naar groot scherm gaat, vallen de elementen naast elkaar.*/
 @media only screen and (min-width: 667px) {
-	main > article:nth-of-type(3) > div {
+	main > article:nth-of-type(3) > fieldset {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
@@ -377,13 +377,13 @@ main > article:nth-of-type(3) {
 }
 
 /*De breedte van de afbeeldingen in dit article.*/
-main > article:nth-of-type(3) > div > div > img {
+main > article:nth-of-type(3) > fieldset > fieldset > img {
 	width: 312px;
 }
 
 /*De breedte van de afbeeldingen in dit article gaat omhoog wanneer men naar groot scherm gaat.*/
 @media only screen and (min-width: 667px) {
-	main > article:nth-of-type(3) > div > div > img {
+	main > article:nth-of-type(3) > fieldset > fieldset > img {
 		width: 461px;
 	}
 }
@@ -432,7 +432,7 @@ main > article:nth-of-type(4) > a > img {
 }
 
 /*Deze class zorgt ervoor dat de rogue in stealth gaat.*/
-main > article:nth-of-type(4) > div > img:nth-of-type(2) {
+main > article:nth-of-type(4) > fieldset > img:nth-of-type(2) {
 	width: 150px;
 	opacity: 0;
 }
@@ -443,21 +443,21 @@ main > article:nth-of-type(4) > div > img:nth-of-type(2) {
 }
 
 /*De grootte van de afbeeldingen in dit element.*/
-main > article:nth-of-type(4) > div > img {
+main > article:nth-of-type(4) > fieldset > img {
 	width: 348px;
 }
 
 /*Ook dit element veranderd wanneer men het scherm verkleind, pas bij deze class had ik ontdekt dat je meerdere classes in 1 media query kan zetten.*/
 @media only screen and (max-width: 667px) {
-	main > article:nth-of-type(4) > div > img {
+	main > article:nth-of-type(4) > fieldset > img {
 		width: 348px;
 	}
 
-	main > article:nth-of-type(4) > div > img:nth-of-type(2) {
+	main > article:nth-of-type(4) > fieldset > img:nth-of-type(2) {
 		margin-left: 100px;
 	}
 
-	main > article:nth-of-type(4) > div {
+	main > article:nth-of-type(4) > fieldset {
 		display: flex;
 		flex-direction: column;
 	}
@@ -470,7 +470,7 @@ main > article:nth-of-type(4) > div > img {
 
 
 /*Door dit element geven de afbeeldingen in dit element licht wanneer je er met de muis overheen gaat.*/
-main > article:nth-of-type(4) > div > img:hover {
+main > article:nth-of-type(4) > fieldset > img:hover {
 	filter: brightness(1.2);
 }
 
